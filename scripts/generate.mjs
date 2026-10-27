@@ -112,10 +112,22 @@ async function loadData() {
     .sort((a, b) => b[1] - a[1])
     .map(([name, b]) => ({ name, pct: (100 * b) / total }));
 
+  // Featured repos (in config order) first, then the rest by stars / recent activity.
+  const featured = Object.keys(config.featuredRepos || {}).map((k) => k.toLowerCase());
+  const rank = (r) => {
+    const i = featured.indexOf(r.name.toLowerCase());
+    return i === -1 ? Infinity : i;
+  };
+  const tagFor = (r) => Object.entries(config.featuredRepos || {}).find(([k]) => k.toLowerCase() === r.name.toLowerCase())?.[1];
   const projects = [...own]
-    .sort((a, b) => b.stargazers_count - a.stargazers_count || new Date(b.pushed_at) - new Date(a.pushed_at))
+    .sort(
+      (a, b) =>
+        rank(a) - rank(b) ||
+        b.stargazers_count - a.stargazers_count ||
+        new Date(b.pushed_at) - new Date(a.pushed_at),
+    )
     .slice(0, config.maxProjects)
-    .map((r) => ({ name: r.name, language: r.language, stars: r.stargazers_count, size: r.size }));
+    .map((r) => ({ name: r.name, language: r.language, stars: r.stargazers_count, size: r.size, tag: tagFor(r) }));
 
   return {
     name: config.displayName || user.name || USER,
@@ -291,7 +303,7 @@ function projectsCard(d) {
         <rect x="${n.x - 16}" y="${n.y - 16}" width="32" height="32" rx="6" fill="${n.color}"/>
         <text x="${n.x}" y="${n.y + 5}" text-anchor="middle" style="font-size:${n.badge.length > 2 ? 10 : 13}px;font-weight:700;fill:${n.fg}">${esc(n.badge)}</text>
         <text x="${n.x}" y="${labelY}" text-anchor="middle" style="font-family:${T.serifMono};font-size:17px">${esc(trunc(n.name, 24))}</text>
-        <text x="${n.x}" y="${labelY + 20}" text-anchor="middle" style="font-family:${T.serifMono};font-size:11px;fill:${T.muted}">${esc(n.language || "—")} · ${n.stars} star${n.stars === 1 ? "" : "s"}</text>
+        <text x="${n.x}" y="${labelY + 20}" text-anchor="middle" style="font-family:${T.serifMono};font-size:11px;fill:${T.muted}">${esc(n.tag || n.language || "—")}${n.stars ? ` · ★ ${n.stars}` : ""}</text>
       </g></g>`;
     })
     .join("");
@@ -306,6 +318,37 @@ function projectsCard(d) {
   return frame(W, H, body, "", style);
 }
 
+// Text comes from config.domains so it can be edited without touching code.
+function domainsCard() {
+  const ds = config.domains || [];
+  const W = 1080, H = 520, colW = (W - 88) / Math.max(ds.length, 1);
+  const cols = ds
+    .map((d, i) => {
+      const x = 44 + i * colW + (i ? 24 : 0), w = colW - 24;
+      const pts = d.points
+        .map((p, j) => `<text x="${x + 16}" y="${352 + j * 26}" style="font-family:${T.serifMono};font-size:13px">${esc(p)}</text>
+          <rect x="${x}" y="${344 + j * 26}" width="6" height="6" fill="${d.color}"/>`)
+        .join("");
+      return `<g class="in" style="animation-delay:${0.15 + i * 0.15}s">
+        ${i ? `<line x1="${x - 24}" y1="170" x2="${x - 24}" y2="${H - 60}" stroke="#d5dae5"/>` : ""}
+        <text x="${x}" y="178" class="label" style="font-size:10px">0${i + 1} / ${esc(d.key)}</text>
+        <circle cx="${x + w - 12}" cy="174" r="3" fill="${d.color}" class="pulse" style="animation-delay:${i * 0.5}s"/>
+        <text x="${x}" y="214" style="font-family:${T.serifMono};font-size:19px;font-weight:700">${esc(d.title)}</text>
+        <text x="${x}" y="284" style="font-size:44px;letter-spacing:1px;fill:${d.color}">${esc(d.metric[0])}</text>
+        <text x="${x}" y="308" class="small" style="font-family:${T.serifMono}">${esc(d.metric[1])}</text>
+        ${pts}
+      </g>`;
+    })
+    .join("");
+  const body = `
+  <text x="44" y="52" class="label">DOMAINS</text>
+  <text x="44" y="98" style="font-family:${T.serifMono};font-size:28px;font-weight:700">Where the work lives</text>
+  <line x1="44" y1="132" x2="${W - 44}" y2="132" stroke="#c9cfdc" stroke-dasharray="6 10"/>
+  ${cols}`;
+  const style = `.pulse { animation: pulse 2.4s ease-in-out infinite } @keyframes pulse { 50% { opacity: .25 } }`;
+  return frame(W, H, body, "", style);
+}
+
 // ---------- main ----------
 const data = await loadData();
 await mkdir(new URL("cards/", ROOT), { recursive: true });
@@ -313,6 +356,7 @@ await Promise.all([
   writeFile(new URL("cards/hero.svg", ROOT), heroCard(data)),
   writeFile(new URL("cards/languages.svg", ROOT), languagesCard(data)),
   writeFile(new URL("cards/projects.svg", ROOT), projectsCard(data)),
+  writeFile(new URL("cards/domains.svg", ROOT), domainsCard()),
   writeFile(new URL("cards/stats.json", ROOT), JSON.stringify(data, null, 2) + "\n"),
 ]);
 console.log(`cards written: ${data.repos} repos, ${data.stars} stars, ${data.contributions} contributions, ${data.languages.length} languages`);

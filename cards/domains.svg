@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="520" viewBox="0 0 1080 520" role="img">
+  <defs>
+  <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+    <path d="M24 0H0V24" fill="none" stroke="#dfe4ee" stroke-width="1"/>
+  </pattern>
+  <pattern id="dots" width="4" height="4" patternUnits="userSpaceOnUse">
+    <rect width="4" height="4" fill="#f4f6fb"/>
+    <circle cx="1.5" cy="1.5" r="1.1" fill="#7d86a8"/>
+  </pattern>
+  <radialGradient id="glow" cx="50%" cy="45%" r="55%">
+    <stop offset="0" stop-color="#fbf8d9" stop-opacity=".9"/>
+    <stop offset="1" stop-color="#eef1f7" stop-opacity="0"/>
+  </radialGradient></defs>
+  <style>
+    text { font-family: 'JetBrains Mono','SFMono-Regular',Menlo,Consolas,'Liberation Mono',monospace; fill: #1f2430 }
+    .label { font-family: 'Courier Prime','Courier New',Courier,monospace; font-size: 11px; letter-spacing: 4px; fill: #5b6475 }
+    .small { font-size: 11px; fill: #5b6475 }
+    .foot { font-family: 'Courier Prime','Courier New',Courier,monospace; font-size: 10px; fill: #5b6475 }
+    .in { opacity: 0; animation: in .8s ease-out forwards }
+    @keyframes in { from { opacity: 0; transform: translateY(6px) } to { opacity: 1; transform: none } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; opacity: 1 !important } }
+    .pulse { animation: pulse 2.4s ease-in-out infinite } @keyframes pulse { 50% { opacity: .25 } }
+  </style>
+  <rect width="1080" height="520" rx="26" fill="#eef1f7"/>
+  <rect width="1080" height="520" rx="26" fill="url(#grid)" opacity=".7"/>
+  
+  <text x="44" y="52" class="label">DOMAINS</text>
+  <text x="44" y="98" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:28px;font-weight:700">Where the work lives</text>
+  <line x1="44" y1="132" x2="1036" y2="132" stroke="#c9cfdc" stroke-dasharray="6 10"/>
+  <g class="in" style="animation-delay:0.15s">
+        
+        <text x="44" y="178" class="label" style="font-size:10px">01 / AI / ML</text>
+        <circle cx="338.6666666666667" cy="174" r="3" fill="#7a6fd0" class="pulse" style="animation-delay:0s"/>
+        <text x="44" y="214" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:19px;font-weight:700">LLM systems &amp; retrieval</text>
+        <text x="44" y="284" style="font-size:44px;letter-spacing:1px;fill:#7a6fd0">95%+</text>
+        <text x="44" y="308" class="small" style="font-family:'Courier Prime','Courier New',Courier,monospace">of a 10K-page doc pruned by GNN</text>
+        <text x="60" y="352" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:13px">Self-auditing RAG (VeriSync AI)</text>
+          <rect x="44" y="344" width="6" height="6" fill="#7a6fd0"/><text x="60" y="378" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:13px">Hybrid dense + sparse retrieval</text>
+          <rect x="44" y="370" width="6" height="6" fill="#7a6fd0"/><text x="60" y="404" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:13px">GraphSAGE pruning, paper in prep</text>
+          <rect x="44" y="396" width="6" height="6" fill="#7a6fd0"/><text x="60" y="430" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:13px">LangGraph · pgvector · PyG</text>
+          <rect x="44" y="422" width="6" height="6" fill="#7a6fd0"/>
+      </g><g class="in" style="animation-delay:0.3s">
+        <line x1="374.6666666666667" y1="170" x2="374.6666666666667" y2="460" stroke="#d5dae5"/>
+        <text x="398.6666666666667" y="178" class="label" style="font-size:10px">02 / DISTRIBUTED SYSTEMS</text>
+        <circle cx="693.3333333333334" cy="174" r="3" fill="#c48a1c" class="pulse" style="animation-delay:0.5s"/>
+        <text x="398.6666666666667" y="214" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:19px;font-weight:700">Streaming infrastructure</text>
+        <text x="398.6666666666667" y="284" style="font-size:44px;letter-spacing:1px;fill:#c48a1c">223K</text>
+        <text x="398.6666666666667" y="308" class="small" style="font-family:'Courier Prime','Courier New',Courier,monospace">ops/sec, group-commit WAL</text>
+        <text x="414.6666666666667" y="352" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:13px">Kafka-class broker on Raft</text>
+          <rect x="398.6666666666667" y="344" width="6" height="6" fill="#c48a1c"/><text x="414.6666666666667" y="378" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:13px">~2.8 s broker failover</text>
+          <rect x="398.6666666666667" y="370" width="6" height="6" fill="#c48a1c"/><text x="414.6666666666667" y="404" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:13px">2,000 partitions, 68x smaller index</text>
+          <rect x="398.6666666666667" y="396" width="6" height="6" fill="#c48a1c"/><text x="414.6666666666667" y="430" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:13px">Java 25 · Netty · Ratis</text>
+          <rect x="398.6666666666667" y="422" width="6" height="6" fill="#c48a1c"/>
+      </g><g class="in" style="animation-delay:0.44999999999999996s">
+        <line x1="705.3333333333334" y1="170" x2="705.3333333333334" y2="460" stroke="#d5dae5"/>
+        <text x="729.3333333333334" y="178" class="label" style="font-size:10px">03 / PRODUCT</text>
+        <circle cx="1024" cy="174" r="3" fill="#2f8f6b" class="pulse" style="animation-delay:1s"/>
+        <text x="729.3333333333334" y="214" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:19px;font-weight:700">Full-stack &amp; mobile</text>
+        <text x="729.3333333333334" y="284" style="font-size:44px;letter-spacing:1px;fill:#2f8f6b">1,000+</text>
+        <text x="729.3333333333334" y="308" class="small" style="font-family:'Courier Prime','Courier New',Courier,monospace">daily users in production</text>
+        <text x="745.3333333333334" y="352" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:13px">BLE + face-verified attendance</text>
+          <rect x="729.3333333333334" y="344" width="6" height="6" fill="#2f8f6b"/><text x="745.3333333333334" y="378" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:13px">5-10 min to &lt;30 s per class</text>
+          <rect x="729.3333333333334" y="370" width="6" height="6" fill="#2f8f6b"/><text x="745.3333333333334" y="404" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:13px">Two published Indian patents</text>
+          <rect x="729.3333333333334" y="396" width="6" height="6" fill="#2f8f6b"/><text x="745.3333333333334" y="430" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:13px">FastAPI · Ionic · OpenCV</text>
+          <rect x="729.3333333333334" y="422" width="6" height="6" fill="#2f8f6b"/>
+      </g>
+  <text x="1036" y="498" text-anchor="end" class="foot">github.com/usermayalive</text>
+</svg>

@@ -2,11 +2,42 @@
   "username": "usermayalive",
   "displayName": "Manas",
   "greeting": "HELLO, WORLD. I'M",
-  "tagline": "On the public internet",
-  "role": "Frontend / full-stack engineer",
-  "focus": [],
+  "tagline": "B.Tech CSE · IIIT Pune · 2 Indian patents",
+  "role": "AI/ML engineer · distributed systems · full-stack",
+  "focus": ["LLM Systems", "Distributed Systems", "Full-stack"],
   "maxLanguages": 8,
   "maxProjects": 6,
   "excludeRepos": ["usermayalive"],
-  "excludeLanguages": []
+  "excludeLanguages": [],
+  "featuredRepos": {
+    "kafka_ka_baap": "Raft-based event streaming",
+    "Verisync_ai": "Self-auditing RAG assistant",
+    "my_own_simple_kafka": "Kafka-style broker",
+    "checkpoint-": "Patented attendance system",
+    "legalguardiangpt": "LLM · Python",
+    "BRAINWAVE_INSIGHTGPT": "LLM · Python"
+  },
+  "domains": [
+    {
+      "key": "AI / ML",
+      "title": "LLM systems & retrieval",
+      "color": "#7a6fd0",
+      "metric": ["95%+", "of a 10K-page doc pruned by GNN"],
+      "points": ["Self-auditing RAG (VeriSync AI)", "Hybrid dense + sparse retrieval", "GraphSAGE pruning, paper in prep", "LangGraph · pgvector · PyG"]
+    },
+    {
+      "key": "DISTRIBUTED SYSTEMS",
+      "title": "Streaming infrastructure",
+      "color": "#c48a1c",
+      "metric": ["223K", "ops/sec, group-commit WAL"],
+      "points": ["Kafka-class broker on Raft", "~2.8 s broker failover", "2,000 partitions, 68x smaller index", "Java 25 · Netty · Ratis"]
+    },
+    {
+      "key": "PRODUCT",
+      "title": "Full-stack & mobile",
+      "color": "#2f8f6b",
+      "metric": ["1,000+", "daily users in production"],
+      "points": ["BLE + face-verified attendance", "5-10 min to <30 s per class", "Two published Indian patents", "FastAPI · Ionic · OpenCV"]
+    }
+  ]
 }
