@@ -36,47 +36,47 @@
         <rect x="524" y="324" width="32" height="32" rx="6" fill="#b07219"/>
         <text x="540" y="345" text-anchor="middle" style="font-size:13px;font-weight:700;fill:#fff">J</text>
         <text x="540" y="446" text-anchor="middle" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:17px">kafka_ka_baap</text>
-        <text x="540" y="466" text-anchor="middle" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:11px;fill:#5b6475">Java · 0 stars</text>
+        <text x="540" y="466" text-anchor="middle" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:11px;fill:#5b6475">Raft-based event streaming</text>
       </g></g><g class="in" style="animation-delay:0.32s"><g class="bob" style="animation-delay:-1.1s">
-        <circle cx="190" cy="270" r="61.33921738953923" fill="none" stroke="#f1e05a" stroke-opacity=".35" stroke-dasharray="10 6"/>
-        <circle cx="190" cy="270" r="49.33921738953923" fill="#eef1f7"/>
-        <circle cx="190" cy="270" r="49.33921738953923" fill="#f1e05a" fill-opacity=".28" stroke="#f1e05a" stroke-opacity=".5"/>
-        <rect x="174" y="254" width="32" height="32" rx="6" fill="#f1e05a"/>
-        <text x="190" y="275" text-anchor="middle" style="font-size:13px;font-weight:700;fill:#3b3200">JS</text>
-        <text x="190" y="347.3392173895392" text-anchor="middle" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:17px">checkpoint-</text>
-        <text x="190" y="367.3392173895392" text-anchor="middle" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:11px;fill:#5b6475">JavaScript · 0 stars</text>
+        <circle cx="190" cy="270" r="54.67070575415456" fill="none" stroke="#3572A5" stroke-opacity=".35" stroke-dasharray="10 6"/>
+        <circle cx="190" cy="270" r="42.67070575415456" fill="#eef1f7"/>
+        <circle cx="190" cy="270" r="42.67070575415456" fill="#3572A5" fill-opacity=".28" stroke="#3572A5" stroke-opacity=".5"/>
+        <rect x="174" y="254" width="32" height="32" rx="6" fill="#3572A5"/>
+        <text x="190" y="275" text-anchor="middle" style="font-size:13px;font-weight:700;fill:#fff">Py</text>
+        <text x="190" y="340.67070575415454" text-anchor="middle" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:17px">Verisync_ai</text>
+        <text x="190" y="360.67070575415454" text-anchor="middle" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:11px;fill:#5b6475">Self-auditing RAG assistant</text>
       </g></g><g class="in" style="animation-delay:0.44s"><g class="bob" style="animation-delay:-2.2s">
-        <circle cx="890" cy="270" r="64" fill="none" stroke="#f1e05a" stroke-opacity=".35" stroke-dasharray="10 6"/>
-        <circle cx="890" cy="270" r="52" fill="#eef1f7"/>
-        <circle cx="890" cy="270" r="52" fill="#f1e05a" fill-opacity=".28" stroke="#f1e05a" stroke-opacity=".5"/>
-        <rect x="874" y="254" width="32" height="32" rx="6" fill="#f1e05a"/>
-        <text x="890" y="275" text-anchor="middle" style="font-size:13px;font-weight:700;fill:#3b3200">JS</text>
-        <text x="890" y="350" text-anchor="middle" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:17px">avasthi-classes-</text>
-        <text x="890" y="370" text-anchor="middle" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:11px;fill:#5b6475">JavaScript · 0 stars</text>
+        <circle cx="890" cy="270" r="49.289793201182974" fill="none" stroke="#b07219" stroke-opacity=".35" stroke-dasharray="10 6"/>
+        <circle cx="890" cy="270" r="37.289793201182974" fill="#eef1f7"/>
+        <circle cx="890" cy="270" r="37.289793201182974" fill="#b07219" fill-opacity=".28" stroke="#b07219" stroke-opacity=".5"/>
+        <rect x="874" y="254" width="32" height="32" rx="6" fill="#b07219"/>
+        <text x="890" y="275" text-anchor="middle" style="font-size:13px;font-weight:700;fill:#fff">J</text>
+        <text x="890" y="335.289793201183" text-anchor="middle" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:17px">my_own_simple_kafka</text>
+        <text x="890" y="355.289793201183" text-anchor="middle" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:11px;fill:#5b6475">Kafka-style broker</text>
       </g></g><g class="in" style="animation-delay:0.56s"><g class="bob" style="animation-delay:-3.3000000000000003s">
-        <circle cx="290" cy="510" r="60.23644528496101" fill="none" stroke="#f1e05a" stroke-opacity=".35" stroke-dasharray="10 6"/>
-        <circle cx="290" cy="510" r="48.23644528496101" fill="#eef1f7"/>
-        <circle cx="290" cy="510" r="48.23644528496101" fill="#f1e05a" fill-opacity=".28" stroke="#f1e05a" stroke-opacity=".5"/>
+        <circle cx="290" cy="510" r="64" fill="none" stroke="#f1e05a" stroke-opacity=".35" stroke-dasharray="10 6"/>
+        <circle cx="290" cy="510" r="52" fill="#eef1f7"/>
+        <circle cx="290" cy="510" r="52" fill="#f1e05a" fill-opacity=".28" stroke="#f1e05a" stroke-opacity=".5"/>
         <rect x="274" y="494" width="32" height="32" rx="6" fill="#f1e05a"/>
         <text x="290" y="515" text-anchor="middle" style="font-size:13px;font-weight:700;fill:#3b3200">JS</text>
-        <text x="290" y="586.2364452849611" text-anchor="middle" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:17px">freelance</text>
-        <text x="290" y="606.2364452849611" text-anchor="middle" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:11px;fill:#5b6475">JavaScript · 0 stars</text>
+        <text x="290" y="590" text-anchor="middle" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:17px">checkpoint-</text>
+        <text x="290" y="610" text-anchor="middle" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:11px;fill:#5b6475">Patented attendance system</text>
       </g></g><g class="in" style="animation-delay:0.6799999999999999s"><g class="bob" style="animation-delay:-4.4s">
-        <circle cx="790" cy="510" r="56.697705272423256" fill="none" stroke="#3572A5" stroke-opacity=".35" stroke-dasharray="10 6"/>
-        <circle cx="790" cy="510" r="44.697705272423256" fill="#eef1f7"/>
-        <circle cx="790" cy="510" r="44.697705272423256" fill="#3572A5" fill-opacity=".28" stroke="#3572A5" stroke-opacity=".5"/>
+        <circle cx="790" cy="510" r="58.71988630564826" fill="none" stroke="#3572A5" stroke-opacity=".35" stroke-dasharray="10 6"/>
+        <circle cx="790" cy="510" r="46.71988630564826" fill="#eef1f7"/>
+        <circle cx="790" cy="510" r="46.71988630564826" fill="#3572A5" fill-opacity=".28" stroke="#3572A5" stroke-opacity=".5"/>
         <rect x="774" y="494" width="32" height="32" rx="6" fill="#3572A5"/>
         <text x="790" y="515" text-anchor="middle" style="font-size:13px;font-weight:700;fill:#fff">Py</text>
-        <text x="790" y="582.6977052724233" text-anchor="middle" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:17px">legalguardiangpt</text>
-        <text x="790" y="602.6977052724233" text-anchor="middle" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:11px;fill:#5b6475">Python · 0 stars</text>
+        <text x="790" y="584.7198863056483" text-anchor="middle" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:17px">legalguardiangpt</text>
+        <text x="790" y="604.7198863056483" text-anchor="middle" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:11px;fill:#5b6475">LLM · Python</text>
       </g></g><g class="in" style="animation-delay:0.8s"><g class="bob" style="animation-delay:-5.5s">
-        <circle cx="540" cy="600" r="54.14165586411655" fill="none" stroke="#663399" stroke-opacity=".35" stroke-dasharray="10 6"/>
-        <circle cx="540" cy="600" r="42.14165586411655" fill="#eef1f7"/>
-        <circle cx="540" cy="600" r="42.14165586411655" fill="#663399" fill-opacity=".28" stroke="#663399" stroke-opacity=".5"/>
-        <rect x="524" y="584" width="32" height="32" rx="6" fill="#663399"/>
-        <text x="540" y="605" text-anchor="middle" style="font-size:10px;font-weight:700;fill:#fff">CSS</text>
-        <text x="540" y="670.1416558641165" text-anchor="middle" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:17px">portfolio</text>
-        <text x="540" y="690.1416558641165" text-anchor="middle" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:11px;fill:#5b6475">CSS · 0 stars</text>
+        <circle cx="540" cy="600" r="57.32260203943471" fill="none" stroke="#3572A5" stroke-opacity=".35" stroke-dasharray="10 6"/>
+        <circle cx="540" cy="600" r="45.32260203943471" fill="#eef1f7"/>
+        <circle cx="540" cy="600" r="45.32260203943471" fill="#3572A5" fill-opacity=".28" stroke="#3572A5" stroke-opacity=".5"/>
+        <rect x="524" y="584" width="32" height="32" rx="6" fill="#3572A5"/>
+        <text x="540" y="605" text-anchor="middle" style="font-size:13px;font-weight:700;fill:#fff">Py</text>
+        <text x="540" y="673.3226020394347" text-anchor="middle" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:17px">BRAINWAVE_INSIGHTGPT</text>
+        <text x="540" y="693.3226020394347" text-anchor="middle" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:11px;fill:#5b6475">LLM · Python</text>
       </g></g>
   <text x="1036" y="718" text-anchor="end" class="foot">github.com/usermayalive</text>
 </svg>

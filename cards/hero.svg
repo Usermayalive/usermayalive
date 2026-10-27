@@ -45,8 +45,8 @@
 
   <text x="44" y="138" class="label in" style="fill:#f2d94e;font-size:12px;animation-delay:.1s">HELLO, WORLD. I&apos;M</text>
   <text x="40" y="238" class="in" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:104px;font-weight:700;fill:url(#dots);stroke:#9aa1bd;stroke-width:1.2;letter-spacing:2px;animation-delay:.3s">Manas</text>
-  <text x="44" y="396" class="in" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:19px;animation-delay:.6s">JavaScript / Java / Python</text>
-  <text x="44" y="428" class="in small" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:13px;animation-delay:.75s">On the public internet</text>
+  <text x="44" y="396" class="in" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:19px;animation-delay:.6s">LLM Systems / Distributed Systems / Full-stack</text>
+  <text x="44" y="428" class="in small" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:13px;animation-delay:.75s">B.Tech CSE · IIIT Pune · 2 Indian patents</text>
   <rect x="44" y="370" width="2" height="0" fill="#1f2430"/>
 
   <line x1="44" y1="496" x2="1036" y2="496" stroke="#c9cfdc"/>
@@ -61,7 +61,7 @@
       </g><g class="in" style="animation-delay:1.5s">
         <text x="540" y="548" class="label" style="font-size:10px">CONTRIBUTIONS</text>
         <circle cx="748" cy="544" r="3" fill="#f2d94e" class="pulse" style="animation-delay:0.8s"/>
-        <text x="540" y="588" style="font-size:28px;letter-spacing:2px">128</text>
+        <text x="540" y="588" style="font-size:28px;letter-spacing:2px">129</text>
       </g><g class="in" style="animation-delay:1.65s">
         <text x="788" y="548" class="label" style="font-size:10px">FOLLOWERS</text>
         <circle cx="996" cy="544" r="3" fill="#f2d94e" class="pulse" style="animation-delay:1.2000000000000002s"/>

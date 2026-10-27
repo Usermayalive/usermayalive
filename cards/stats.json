@@ -3,7 +3,7 @@
   "repos": 14,
   "followers": 0,
   "stars": 0,
-  "contributions": 128,
+  "contributions": 129,
   "languages": [
     {
       "name": "JavaScript",
@@ -55,37 +55,43 @@
       "name": "kafka_ka_baap",
       "language": "Java",
       "stars": 0,
-      "size": 735
+      "size": 735,
+      "tag": "Raft-based event streaming"
+    },
+    {
+      "name": "Verisync_ai",
+      "language": "Python",
+      "stars": 0,
+      "size": 150,
+      "tag": "Self-auditing RAG assistant"
+    },
+    {
+      "name": "my_own_simple_kafka",
+      "language": "Java",
+      "stars": 0,
+      "size": 16,
+      "tag": "Kafka-style broker"
     },
     {
       "name": "checkpoint-",
       "language": "JavaScript",
       "stars": 0,
-      "size": 6140
-    },
-    {
-      "name": "avasthi-classes-",
-      "language": "JavaScript",
-      "stars": 0,
-      "size": 20393
-    },
-    {
-      "name": "freelance",
-      "language": "JavaScript",
-      "stars": 0,
-      "size": 3733
+      "size": 6140,
+      "tag": "Patented attendance system"
     },
     {
       "name": "legalguardiangpt",
       "language": "Python",
       "stars": 0,
-      "size": 755
+      "size": 755,
+      "tag": "LLM · Python"
     },
     {
-      "name": "portfolio",
-      "language": "CSS",
+      "name": "BRAINWAVE_INSIGHTGPT",
+      "language": "Python",
       "stars": 0,
-      "size": 237
+      "size": 433,
+      "tag": "LLM · Python"
     }
   ]
 }
