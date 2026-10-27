@@ -204,11 +204,18 @@ function identicon(cx, cy, cell) {
 }
 
 // ---------- cards ----------
-// Circular profile photo, softly toned toward the card palette, with a faint halftone overlay.
+// Circular profile photo in monochrome (card ink to card background), with a faint halftone overlay.
 function photo(uri, cx, cy, r) {
   return `<defs>
     <clipPath id="avatarClip"><circle cx="${cx}" cy="${cy}" r="${r}"/></clipPath>
-    <filter id="tone"><feColorMatrix type="saturate" values="0.8"/></filter>
+    <filter id="tone" color-interpolation-filters="sRGB">
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncR type="table" tableValues="0.12 0.95"/>
+        <feFuncG type="table" tableValues="0.14 0.96"/>
+        <feFuncB type="table" tableValues="0.19 0.98"/>
+      </feComponentTransfer>
+    </filter>
     <pattern id="halftone" width="5" height="5" patternUnits="userSpaceOnUse">
       <circle cx="2.5" cy="2.5" r="1" fill="#eef1f7"/>
     </pattern>
