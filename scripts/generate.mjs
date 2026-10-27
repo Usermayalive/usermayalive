@@ -88,6 +88,19 @@ async function contributionsLastYear() {
   return m ? Number(m[1].replace(/,/g, "")) : null;
 }
 
+// GitHub serves README SVGs as images, which can't load external URLs, so the photo is inlined.
+async function avatarDataUri(url) {
+  if (config.avatar === "identicon" || !url) return null;
+  try {
+    const res = await fetch(`${url}${url.includes("?") ? "&" : "?"}s=360`);
+    if (!res.ok) return null;
+    const type = res.headers.get("content-type") || "image/jpeg";
+    return `data:${type};base64,${Buffer.from(await res.arrayBuffer()).toString("base64")}`;
+  } catch {
+    return null;
+  }
+}
+
 async function loadData() {
   const user = await gh(`/users/${USER}`);
   const repos = [];
@@ -131,6 +144,7 @@ async function loadData() {
 
   return {
     name: config.displayName || user.name || USER,
+    avatar: await avatarDataUri(user.avatar_url),
     repos: user.public_repos,
     followers: user.followers,
     stars: repos.filter((r) => !r.fork).reduce((a, r) => a + r.stargazers_count, 0),
@@ -190,6 +204,22 @@ function identicon(cx, cy, cell) {
 }
 
 // ---------- cards ----------
+// Circular profile photo, softly toned toward the card palette, with a faint halftone overlay.
+function photo(uri, cx, cy, r) {
+  return `<defs>
+    <clipPath id="avatarClip"><circle cx="${cx}" cy="${cy}" r="${r}"/></clipPath>
+    <filter id="tone"><feColorMatrix type="saturate" values="0.8"/></filter>
+    <pattern id="halftone" width="5" height="5" patternUnits="userSpaceOnUse">
+      <circle cx="2.5" cy="2.5" r="1" fill="#eef1f7"/>
+    </pattern>
+  </defs>
+  <circle cx="${cx}" cy="${cy}" r="${r + 7}" fill="#f7f8fc" stroke="#cfd5e3"/>
+  <g clip-path="url(#avatarClip)">
+    <image href="${uri}" x="${cx - r}" y="${cy - r}" width="${2 * r}" height="${2 * r}" preserveAspectRatio="xMidYMid slice" filter="url(#tone)"/>
+    <rect x="${cx - r}" y="${cy - r}" width="${2 * r}" height="${2 * r}" fill="url(#halftone)" opacity=".22"/>
+  </g>`;
+}
+
 function heroCard(d) {
   const W = 1080, H = 620;
   const focus = (config.focus.length ? config.focus : d.languages.slice(0, 3).map((l) => l.name)).join(" / ");
@@ -224,7 +254,7 @@ function heroCard(d) {
   <g class="spin rev" style="transform-origin:${cx}px ${cy}px">
     <circle cx="${cx}" cy="${cy}" r="176" fill="none" stroke="${T.faint}" stroke-width=".8" stroke-dasharray="2 8" opacity=".6"/>
   </g>
-  <g class="float">${identicon(cx, cy, 58)}</g>
+  ${d.avatar ? photo(d.avatar, cx, cy, 158) : `<g class="float">${identicon(cx, cy, 58)}</g>`}
 
   <text x="44" y="138" class="label in" style="fill:${T.accent};font-size:12px;animation-delay:.1s">${esc(config.greeting)}</text>
   <text x="40" y="238" class="in" style="font-family:${T.serifMono};font-size:104px;font-weight:700;fill:url(#dots);stroke:#9aa1bd;stroke-width:1.2;letter-spacing:2px;animation-delay:.3s">${esc(d.name)}</text>
@@ -357,6 +387,6 @@ await Promise.all([
   writeFile(new URL("cards/languages.svg", ROOT), languagesCard(data)),
   writeFile(new URL("cards/projects.svg", ROOT), projectsCard(data)),
   writeFile(new URL("cards/domains.svg", ROOT), domainsCard()),
-  writeFile(new URL("cards/stats.json", ROOT), JSON.stringify(data, null, 2) + "\n"),
+  writeFile(new URL("cards/stats.json", ROOT), JSON.stringify({ ...data, avatar: undefined }, null, 2) + "\n"),
 ]);
 console.log(`cards written: ${data.repos} repos, ${data.stars} stars, ${data.contributions} contributions, ${data.languages.length} languages`);
