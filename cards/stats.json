@@ -1,0 +1,91 @@
+{
+  "name": "Manas",
+  "repos": 14,
+  "followers": 0,
+  "stars": 0,
+  "contributions": 127,
+  "languages": [
+    {
+      "name": "JavaScript",
+      "pct": 32.193520952667534
+    },
+    {
+      "name": "Java",
+      "pct": 24.275255905972912
+    },
+    {
+      "name": "Python",
+      "pct": 22.76864946872821
+    },
+    {
+      "name": "TypeScript",
+      "pct": 8.884320229770319
+    },
+    {
+      "name": "CSS",
+      "pct": 5.0830737185782064
+    },
+    {
+      "name": "HTML",
+      "pct": 4.206029308689001
+    },
+    {
+      "name": "PLpgSQL",
+      "pct": 1.508858734137073
+    },
+    {
+      "name": "Shell",
+      "pct": 0.761036104619491
+    },
+    {
+      "name": "Swift",
+      "pct": 0.18204565015402707
+    },
+    {
+      "name": "Ruby",
+      "pct": 0.07423570557254287
+    },
+    {
+      "name": "Dockerfile",
+      "pct": 0.06297422111068868
+    }
+  ],
+  "projects": [
+    {
+      "name": "kafka_ka_baap",
+      "language": "Java",
+      "stars": 0,
+      "size": 735
+    },
+    {
+      "name": "checkpoint-",
+      "language": "JavaScript",
+      "stars": 0,
+      "size": 6140
+    },
+    {
+      "name": "avasthi-classes-",
+      "language": "JavaScript",
+      "stars": 0,
+      "size": 20393
+    },
+    {
+      "name": "freelance",
+      "language": "JavaScript",
+      "stars": 0,
+      "size": 3733
+    },
+    {
+      "name": "legalguardiangpt",
+      "language": "Python",
+      "stars": 0,
+      "size": 755
+    },
+    {
+      "name": "portfolio",
+      "language": "CSS",
+      "stars": 0,
+      "size": 237
+    }
+  ]
+}

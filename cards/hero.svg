@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="620" viewBox="0 0 1080 620" role="img">
+  <defs>
+  <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+    <path d="M24 0H0V24" fill="none" stroke="#dfe4ee" stroke-width="1"/>
+  </pattern>
+  <pattern id="dots" width="4" height="4" patternUnits="userSpaceOnUse">
+    <rect width="4" height="4" fill="#f4f6fb"/>
+    <circle cx="1.5" cy="1.5" r="1.1" fill="#7d86a8"/>
+  </pattern>
+  <radialGradient id="glow" cx="50%" cy="45%" r="55%">
+    <stop offset="0" stop-color="#fbf8d9" stop-opacity=".9"/>
+    <stop offset="1" stop-color="#eef1f7" stop-opacity="0"/>
+  </radialGradient></defs>
+  <style>
+    text { font-family: 'JetBrains Mono','SFMono-Regular',Menlo,Consolas,'Liberation Mono',monospace; fill: #1f2430 }
+    .label { font-family: 'Courier Prime','Courier New',Courier,monospace; font-size: 11px; letter-spacing: 4px; fill: #5b6475 }
+    .small { font-size: 11px; fill: #5b6475 }
+    .foot { font-family: 'Courier Prime','Courier New',Courier,monospace; font-size: 10px; fill: #5b6475 }
+    .in { opacity: 0; animation: in .8s ease-out forwards }
+    @keyframes in { from { opacity: 0; transform: translateY(6px) } to { opacity: 1; transform: none } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; opacity: 1 !important } }
+    
+    .spin { animation: spin 40s linear infinite } .rev { animation-duration: 70s; animation-direction: reverse }
+    @keyframes spin { to { transform: rotate(360deg) } }
+    .float { animation: float 6s ease-in-out infinite }
+    @keyframes float { 50% { transform: translateY(-8px) } }
+    .pulse { animation: pulse 2.4s ease-in-out infinite }
+    @keyframes pulse { 50% { opacity: .25 } }
+  </style>
+  <rect width="1080" height="620" rx="26" fill="#eef1f7"/>
+  <rect width="1080" height="620" rx="26" fill="url(#grid)" opacity=".7"/>
+  
+  <text x="44" y="52" class="label">README / LIVING IDENTITY</text>
+  <text x="1036" y="52" text-anchor="end" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:12px;fill:#5b6475">@usermayalive</text>
+
+  <circle cx="820" cy="270" r="210" fill="url(#glow)"/>
+  <g class="spin" style="transform-origin:820px 270px">
+    <circle cx="820" cy="270" r="196" fill="none" stroke="#f2d94e" stroke-width="1.2" stroke-dasharray="220 1012" stroke-linecap="round" opacity=".8"/>
+    <circle cx="820" cy="270" r="196" fill="none" stroke="#8e86c9" stroke-width="1.2" stroke-dasharray="160 1072" stroke-dashoffset="-600" stroke-linecap="round" opacity=".7"/>
+  </g>
+  <g class="spin rev" style="transform-origin:820px 270px">
+    <circle cx="820" cy="270" r="176" fill="none" stroke="#9aa3b5" stroke-width=".8" stroke-dasharray="2 8" opacity=".6"/>
+  </g>
+  <g class="float"><rect x="736" y="128" width="52" height="52" fill="url(#dots)"/><rect x="852" y="128" width="52" height="52" fill="url(#dots)"/><rect x="794" y="128" width="52" height="52" fill="url(#dots)"/><rect x="678" y="186" width="52" height="52" fill="url(#dots)"/><rect x="910" y="186" width="52" height="52" fill="url(#dots)"/><rect x="678" y="244" width="52" height="52" fill="url(#dots)"/><rect x="910" y="244" width="52" height="52" fill="url(#dots)"/><rect x="736" y="244" width="52" height="52" fill="url(#dots)"/><rect x="852" y="244" width="52" height="52" fill="url(#dots)"/><rect x="736" y="302" width="52" height="52" fill="url(#dots)"/><rect x="852" y="302" width="52" height="52" fill="url(#dots)"/><rect x="794" y="302" width="52" height="52" fill="url(#dots)"/><rect x="736" y="360" width="52" height="52" fill="url(#dots)"/><rect x="852" y="360" width="52" height="52" fill="url(#dots)"/></g>
+
+  <text x="44" y="138" class="label in" style="fill:#f2d94e;font-size:12px;animation-delay:.1s">HELLO, WORLD. I&apos;M</text>
+  <text x="40" y="238" class="in" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:104px;font-weight:700;fill:url(#dots);stroke:#9aa1bd;stroke-width:1.2;letter-spacing:2px;animation-delay:.3s">Manas</text>
+  <text x="44" y="396" class="in" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:19px;animation-delay:.6s">JavaScript / Java / Python</text>
+  <text x="44" y="428" class="in small" style="font-family:'Courier Prime','Courier New',Courier,monospace;font-size:13px;animation-delay:.75s">On the public internet</text>
+  <rect x="44" y="370" width="2" height="0" fill="#1f2430"/>
+
+  <line x1="44" y1="496" x2="1036" y2="496" stroke="#c9cfdc"/>
+  <g class="in" style="animation-delay:1.2s">
+        <text x="44" y="548" class="label" style="font-size:10px">REPOSITORIES</text>
+        <circle cx="252" cy="544" r="3" fill="#f2d94e" class="pulse" style="animation-delay:0s"/>
+        <text x="44" y="588" style="font-size:28px;letter-spacing:2px">14</text>
+      </g><g class="in" style="animation-delay:1.3499999999999999s">
+        <text x="292" y="548" class="label" style="font-size:10px">STARS</text>
+        <circle cx="500" cy="544" r="3" fill="#f2d94e" class="pulse" style="animation-delay:0.4s"/>
+        <text x="292" y="588" style="font-size:28px;letter-spacing:2px">0</text>
+      </g><g class="in" style="animation-delay:1.5s">
+        <text x="540" y="548" class="label" style="font-size:10px">CONTRIBUTIONS</text>
+        <circle cx="748" cy="544" r="3" fill="#f2d94e" class="pulse" style="animation-delay:0.8s"/>
+        <text x="540" y="588" style="font-size:28px;letter-spacing:2px">127</text>
+      </g><g class="in" style="animation-delay:1.65s">
+        <text x="788" y="548" class="label" style="font-size:10px">FOLLOWERS</text>
+        <circle cx="996" cy="544" r="3" fill="#f2d94e" class="pulse" style="animation-delay:1.2000000000000002s"/>
+        <text x="788" y="588" style="font-size:28px;letter-spacing:2px">0</text>
+      </g>
+  <text x="1036" y="598" text-anchor="end" class="foot">github.com/usermayalive</text>
+</svg>

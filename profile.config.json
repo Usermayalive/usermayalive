@@ -1,0 +1,12 @@
+{
+  "username": "usermayalive",
+  "displayName": "Manas",
+  "greeting": "HELLO, WORLD. I'M",
+  "tagline": "On the public internet",
+  "role": "Frontend / full-stack engineer",
+  "focus": [],
+  "maxLanguages": 8,
+  "maxProjects": 6,
+  "excludeRepos": ["usermayalive"],
+  "excludeLanguages": []
+}
